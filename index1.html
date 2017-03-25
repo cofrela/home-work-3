@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <script>
+        var arr = [];
+        for (var i = 2; i < 100; i++) {
+          arr[i] = true
+        }
+        
+        var p = 2; // первое простое число
+        console.log(p); 
+        
+        while (p < 100) {
+
+        for (i = 2 * p; i < 100; i += p) {
+                arr[i] = false;
+            }
+            
+        for (i = p + 1; i < 100; i++) {
+                if (arr[i]) break;
+            }
+
+            p = i;
+            
+            console.log(i); 
+        
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
